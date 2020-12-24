@@ -46,7 +46,7 @@
   
     
         ,"post4": {
-            "title": "Introduction",
+            "title": "Data Types and Missing Values",
             "content": "Reference Pandas Home Page . . import pandas as pd reviews = pd.read_csv(&quot;data/winemag-data-130k.csv&quot;, index_col=0) print(&quot;Setup complete.&quot;) . Setup complete. . Exercises . 1. . What is the data type of the points column in the dataset? . dtype = ____ # Check your answer dtype . 2. . Create a Series from entries in the points column, but convert the entries to strings. Hint: strings are str in native Python. . point_strings = ____ # Check your answer point_strings . 3. . Sometimes the price column is null. How many reviews in the dataset are missing a price? . n_missing_prices = ____ # Check your answer n_missing_prices . 4. . What are the most common wine-producing regions? Create a Series counting the number of times each value occurs in the region_1 field. This field is often missing data, so replace missing values with Unknown. Sort in descending order. Your output should look something like this: . Unknown 21247 Napa Valley 4480 ... Bardolino Superiore 1 Primitivo del Tarantino 1 Name: region_1, Length: 1230, dtype: int64 . reviews_per_region = ____ # Check your answer reviews_per_region .",
             "url": "https://brendansd3.github.io/Myfastpages/2020/12/24/DataTypes-And-MissingValues.html",
             "relUrl": "/2020/12/24/DataTypes-And-MissingValues.html",
