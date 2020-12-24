@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Exercises | Data Science Blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Exercises" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Data Science toolbox on jupyter notebook." />
+<meta property="og:description" content="Data Science toolbox on jupyter notebook." />
+<link rel="canonical" href="https://brendansd3.github.io/Myfastpages/2020/12/24/Indexing-Selecting-Assigning.html" />
+<meta property="og:url" content="https://brendansd3.github.io/Myfastpages/2020/12/24/Indexing-Selecting-Assigning.html" />
+<meta property="og:site_name" content="Data Science Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-24T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"Data Science toolbox on jupyter notebook.","url":"https://brendansd3.github.io/Myfastpages/2020/12/24/Indexing-Selecting-Assigning.html","@type":"BlogPosting","headline":"Exercises","dateModified":"2020-12-24T00:00:00-06:00","datePublished":"2020-12-24T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://brendansd3.github.io/Myfastpages/2020/12/24/Indexing-Selecting-Assigning.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Myfastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://brendansd3.github.io/Myfastpages/feed.xml" title="Data Science Blog" /><link rel="shortcut icon" type="image/x-icon" href="/Myfastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Myfastpages/">Data Science Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Myfastpages/about/">About Me</a><a class="page-link" href="/Myfastpages/search/">Search</a><a class="page-link" href="/Myfastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Exercises</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-12-24T00:00:00-06:00" itemprop="datePublished">
+        Dec 24, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/BrendanSD3/Myfastpages/tree/master/_notebooks/2020-12-24-Indexing-Selecting-Assigning.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/Myfastpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/BrendanSD3/Myfastpages/master?filepath=_notebooks%2F2020-12-24-Indexing-Selecting-Assigning.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Myfastpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/BrendanSD3/Myfastpages/blob/master/_notebooks/2020-12-24-Indexing-Selecting-Assigning.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Myfastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2020-12-24-Indexing-Selecting-Assigning.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>References <strong><a href="https://www.kaggle.com/learn/pandas">Pandas Home Page</a></strong></p>
+<hr />
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Run the following cell to load your data and some utility functions (including code to check your answers).</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">reviews</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/winemag-data-130k.csv&quot;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.max_rows&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Setup complete.&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Setup complete.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Look at an overview of your data by running the following line.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">reviews</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>description</th>
+      <th>designation</th>
+      <th>points</th>
+      <th>price</th>
+      <th>province</th>
+      <th>region_1</th>
+      <th>region_2</th>
+      <th>taster_name</th>
+      <th>taster_twitter_handle</th>
+      <th>title</th>
+      <th>variety</th>
+      <th>winery</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>Italy</td>
+      <td>Aromas include tropical fruit, broom, brimston...</td>
+      <td>Vulkà Bianco</td>
+      <td>87</td>
+      <td>NaN</td>
+      <td>Sicily &amp; Sardinia</td>
+      <td>Etna</td>
+      <td>NaN</td>
+      <td>Kerin O’Keefe</td>
+      <td>@kerinokeefe</td>
+      <td>Nicosia 2013 Vulkà Bianco  (Etna)</td>
+      <td>White Blend</td>
+      <td>Nicosia</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Portugal</td>
+      <td>This is ripe and fruity, a wine that is smooth...</td>
+      <td>Avidagos</td>
+      <td>87</td>
+      <td>15.0</td>
+      <td>Douro</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Roger Voss</td>
+      <td>@vossroger</td>
+      <td>Quinta dos Avidagos 2011 Avidagos Red (Douro)</td>
+      <td>Portuguese Red</td>
+      <td>Quinta dos Avidagos</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>US</td>
+      <td>Tart and snappy, the flavors of lime flesh and...</td>
+      <td>NaN</td>
+      <td>87</td>
+      <td>14.0</td>
+      <td>Oregon</td>
+      <td>Willamette Valley</td>
+      <td>Willamette Valley</td>
+      <td>Paul Gregutt</td>
+      <td>@paulgwine</td>
+      <td>Rainstorm 2013 Pinot Gris (Willamette Valley)</td>
+      <td>Pinot Gris</td>
+      <td>Rainstorm</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>US</td>
+      <td>Pineapple rind, lemon pith and orange blossom ...</td>
+      <td>Reserve Late Harvest</td>
+      <td>87</td>
+      <td>13.0</td>
+      <td>Michigan</td>
+      <td>Lake Michigan Shore</td>
+      <td>NaN</td>
+      <td>Alexander Peartree</td>
+      <td>NaN</td>
+      <td>St. Julian 2013 Reserve Late Harvest Riesling ...</td>
+      <td>Riesling</td>
+      <td>St. Julian</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>US</td>
+      <td>Much like the regular bottling from 2012, this...</td>
+      <td>Vintner's Reserve Wild Child Block</td>
+      <td>87</td>
+      <td>65.0</td>
+      <td>Oregon</td>
+      <td>Willamette Valley</td>
+      <td>Willamette Valley</td>
+      <td>Paul Gregutt</td>
+      <td>@paulgwine</td>
+      <td>Sweet Cheeks 2012 Vintner's Reserve Wild Child...</td>
+      <td>Pinot Noir</td>
+      <td>Sweet Cheeks</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.">1.<a class="anchor-link" href="#1."> </a></h2><p>Select the <code>description</code> column from <code>reviews</code> and assign the result to the variable <code>desc</code>.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">desc</span> <span class="o">=</span> <span class="n">reviews</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]</span>
+
+<span class="c1"># Check your answer</span>
+<span class="n">desc</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0         Aromas include tropical fruit, broom, brimston...
+1         This is ripe and fruity, a wine that is smooth...
+                                ...                        
+129969    A dry style of Pinot Gris, this is crisp with ...
+129970    Big, rich and off-dry, this is powered by inte...
+Name: description, Length: 129971, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Follow-up question: what type of object is <code>desc</code>? If you're not sure, you can check by calling Python's <code>type</code> function: <code>type(desc)</code>.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">desc</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>pandas.core.series.Series</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.">2.<a class="anchor-link" href="#2."> </a></h2><p>Select the first value from the description column of <code>reviews</code>, assigning it to variable <code>first_description</code>.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">first_description</span> <span class="o">=</span> <span class="n">desc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Check your answer</span>
+
+<span class="n">first_description</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;Aromas include tropical fruit, broom, brimstone and dried herb. The palate isn&#39;t overly expressive, offering unripened apple, citrus and dried sage alongside brisk acidity.&#34;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#q2.solution()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3.">3.<a class="anchor-link" href="#3."> </a></h2><p>Select the first row of data (the first record) from <code>reviews</code>, assigning it to the variable <code>first_row</code>.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">first_row</span> <span class="o">=</span> <span class="n">reviews</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Check your answer</span>
+<span class="c1">#q3.check()</span>
+<span class="n">first_row</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;Aromas include tropical fruit, broom, brimstone and dried herb. The palate isn&#39;t overly expressive, offering unripened apple, citrus and dried sage alongside brisk acidity.&#34;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#q3.solution()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="4.">4.<a class="anchor-link" href="#4."> </a></h2><p>Select the first 10 values from the <code>description</code> column in <code>reviews</code>, assigning the result to variable <code>first_descriptions</code>.</p>
+<p>Hint: format your output as a pandas Series.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">first_descriptions</span> <span class="o">=</span> <span class="n">desc</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+
+<span class="c1"># Check your answer</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">first_descriptions</span><span class="p">)</span>
+<span class="n">first_descriptions</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    Aromas include tropical fruit, broom, brimston...
+1    This is ripe and fruity, a wine that is smooth...
+                           ...                        
+8    Savory dried thyme notes accent sunnier flavor...
+9    This has great depth of flavor with its fresh ...
+Name: description, Length: 10, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.">5.<a class="anchor-link" href="#5."> </a></h2><p>Select the records with index labels <code>1</code>, <code>2</code>, <code>3</code>, <code>5</code>, and <code>8</code>, assigning the result to the variable <code>sample_reviews</code>.</p>
+<p>In other words, generate the following DataFrame:</p>
+<p><img src="https://i.imgur.com/sHZvI1O.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sample_reviews</span> <span class="o">=</span> <span class="n">reviews</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">]]</span>
+
+<span class="c1"># Check your answer</span>
+<span class="n">sample_reviews</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>description</th>
+      <th>designation</th>
+      <th>points</th>
+      <th>price</th>
+      <th>province</th>
+      <th>region_1</th>
+      <th>region_2</th>
+      <th>taster_name</th>
+      <th>taster_twitter_handle</th>
+      <th>title</th>
+      <th>variety</th>
+      <th>winery</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Portugal</td>
+      <td>This is ripe and fruity, a wine that is smooth...</td>
+      <td>Avidagos</td>
+      <td>87</td>
+      <td>15.0</td>
+      <td>Douro</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Roger Voss</td>
+      <td>@vossroger</td>
+      <td>Quinta dos Avidagos 2011 Avidagos Red (Douro)</td>
+      <td>Portuguese Red</td>
+      <td>Quinta dos Avidagos</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>US</td>
+      <td>Tart and snappy, the flavors of lime flesh and...</td>
+      <td>NaN</td>
+      <td>87</td>
+      <td>14.0</td>
+      <td>Oregon</td>
+      <td>Willamette Valley</td>
+      <td>Willamette Valley</td>
+      <td>Paul Gregutt</td>
+      <td>@paulgwine</td>
+      <td>Rainstorm 2013 Pinot Gris (Willamette Valley)</td>
+      <td>Pinot Gris</td>
+      <td>Rainstorm</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>US</td>
+      <td>Pineapple rind, lemon pith and orange blossom ...</td>
+      <td>Reserve Late Harvest</td>
+      <td>87</td>
+      <td>13.0</td>
+      <td>Michigan</td>
+      <td>Lake Michigan Shore</td>
+      <td>NaN</td>
+      <td>Alexander Peartree</td>
+      <td>NaN</td>
+      <td>St. Julian 2013 Reserve Late Harvest Riesling ...</td>
+      <td>Riesling</td>
+      <td>St. Julian</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Spain</td>
+      <td>Blackberry and raspberry aromas show a typical...</td>
+      <td>Ars In Vitro</td>
+      <td>87</td>
+      <td>15.0</td>
+      <td>Northern Spain</td>
+      <td>Navarra</td>
+      <td>NaN</td>
+      <td>Michael Schachner</td>
+      <td>@wineschach</td>
+      <td>Tandem 2011 Ars In Vitro Tempranillo-Merlot (N...</td>
+      <td>Tempranillo-Merlot</td>
+      <td>Tandem</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Germany</td>
+      <td>Savory dried thyme notes accent sunnier flavor...</td>
+      <td>Shine</td>
+      <td>87</td>
+      <td>12.0</td>
+      <td>Rheinhessen</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Anna Lee C. Iijima</td>
+      <td>NaN</td>
+      <td>Heinz Eifel 2013 Shine Gewürztraminer (Rheinhe...</td>
+      <td>Gewürztraminer</td>
+      <td>Heinz Eifel</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="6.">6.<a class="anchor-link" href="#6."> </a></h2><p>Create a variable <code>df</code> containing the <code>country</code>, <code>province</code>, <code>region_1</code>, and <code>region_2</code> columns of the records with the index labels <code>0</code>, <code>1</code>, <code>10</code>, and <code>100</code>. In other words, generate the following DataFrame:</p>
+<p><img src="https://i.imgur.com/FUCGiKP.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">reviews</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">],[</span><span class="s2">&quot;country&quot;</span><span class="p">,</span><span class="s2">&quot;province&quot;</span><span class="p">,</span><span class="s2">&quot;region_1&quot;</span><span class="p">,</span><span class="s2">&quot;region_2&quot;</span><span class="p">]]</span>
+
+<span class="c1"># Check your answer</span>
+<span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>province</th>
+      <th>region_1</th>
+      <th>region_2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>Italy</td>
+      <td>Sicily &amp; Sardinia</td>
+      <td>Etna</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Portugal</td>
+      <td>Douro</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>US</td>
+      <td>California</td>
+      <td>Napa Valley</td>
+      <td>Napa</td>
+    </tr>
+    <tr>
+      <td>100</td>
+      <td>US</td>
+      <td>New York</td>
+      <td>Finger Lakes</td>
+      <td>Finger Lakes</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="7.">7.<a class="anchor-link" href="#7."> </a></h2><p>Create a variable <code>df</code> containing the <code>country</code> and <code>variety</code> columns of the first 100 records.</p>
+<p>Hint: you may use <code>loc</code> or <code>iloc</code>. When working on the answer this question and the several of the ones that follow, keep the following "gotcha" described in the tutorial:</p>
+<blockquote><p><code>iloc</code> uses the Python stdlib indexing scheme, where the first element of the range is included and the last one excluded. 
+<code>loc</code>, meanwhile, indexes inclusively.</p>
+<p>This is particularly confusing when the DataFrame index is a simple numerical list, e.g. <code>0,...,1000</code>. In this case <code>df.iloc[0:1000]</code> will return 1000 entries, while <code>df.loc[0:1000]</code> return 1001 of them! To get 1000 elements using <code>loc</code>, you will need to go one lower and ask for <code>df.iloc[0:999]</code>.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">reviews</span><span class="o">.</span><span class="n">loc</span><span class="p">[:</span><span class="mi">99</span><span class="p">,[</span><span class="s1">&#39;country&#39;</span><span class="p">,</span><span class="s1">&#39;variety&#39;</span><span class="p">]]</span>
+
+<span class="c1"># Check your answer</span>
+<span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>variety</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>Italy</td>
+      <td>White Blend</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Portugal</td>
+      <td>Portuguese Red</td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>98</td>
+      <td>Italy</td>
+      <td>Sangiovese</td>
+    </tr>
+    <tr>
+      <td>99</td>
+      <td>US</td>
+      <td>Bordeaux-style Red Blend</td>
+    </tr>
+  </tbody>
+</table>
+<p>100 rows × 2 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="8.">8.<a class="anchor-link" href="#8."> </a></h2><p>Create a DataFrame <code>italian_wines</code> containing reviews of wines made in <code>Italy</code>. Hint: <code>reviews.country</code> equals what?</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">italian_wines</span> <span class="o">=</span><span class="n">reviews</span><span class="o">.</span><span class="n">country</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Italy&#39;</span><span class="p">])</span>
+
+<span class="c1"># Check your answer</span>
+<span class="n">italian_wines</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0          True
+1         False
+          ...  
+129969    False
+129970    False
+Name: country, Length: 129971, dtype: bool</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="9.">9.<a class="anchor-link" href="#9."> </a></h2><p>Create a DataFrame <code>top_oceania_wines</code> containing all reviews with at least 95 points (out of 100) for wines from Australia or New Zealand.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">top_oceania_wines</span> <span class="o">=</span> <span class="n">reviews</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">reviews</span><span class="o">.</span><span class="n">country</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Australia&#39;</span><span class="p">,</span><span class="s1">&#39;New Zealand&#39;</span><span class="p">])</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">reviews</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">95</span><span class="p">)]</span>
+
+<span class="c1"># Check your answer</span>
+<span class="n">top_oceania_wines</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>description</th>
+      <th>designation</th>
+      <th>points</th>
+      <th>price</th>
+      <th>province</th>
+      <th>region_1</th>
+      <th>region_2</th>
+      <th>taster_name</th>
+      <th>taster_twitter_handle</th>
+      <th>title</th>
+      <th>variety</th>
+      <th>winery</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>345</td>
+      <td>Australia</td>
+      <td>This wine contains some material over 100 year...</td>
+      <td>Rare</td>
+      <td>100</td>
+      <td>350.0</td>
+      <td>Victoria</td>
+      <td>Rutherglen</td>
+      <td>NaN</td>
+      <td>Joe Czerwinski</td>
+      <td>@JoeCz</td>
+      <td>Chambers Rosewood Vineyards NV Rare Muscat (Ru...</td>
+      <td>Muscat</td>
+      <td>Chambers Rosewood Vineyards</td>
+    </tr>
+    <tr>
+      <td>346</td>
+      <td>Australia</td>
+      <td>This deep brown wine smells like a damp, mossy...</td>
+      <td>Rare</td>
+      <td>98</td>
+      <td>350.0</td>
+      <td>Victoria</td>
+      <td>Rutherglen</td>
+      <td>NaN</td>
+      <td>Joe Czerwinski</td>
+      <td>@JoeCz</td>
+      <td>Chambers Rosewood Vineyards NV Rare Muscadelle...</td>
+      <td>Muscadelle</td>
+      <td>Chambers Rosewood Vineyards</td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>122507</td>
+      <td>New Zealand</td>
+      <td>This blend of Cabernet Sauvignon (62.5%), Merl...</td>
+      <td>SQM Gimblett Gravels Cabernets/Merlot</td>
+      <td>95</td>
+      <td>79.0</td>
+      <td>Hawke's Bay</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Joe Czerwinski</td>
+      <td>@JoeCz</td>
+      <td>Squawking Magpie 2014 SQM Gimblett Gravels Cab...</td>
+      <td>Bordeaux-style Red Blend</td>
+      <td>Squawking Magpie</td>
+    </tr>
+    <tr>
+      <td>122939</td>
+      <td>Australia</td>
+      <td>Full-bodied and plush yet vibrant and imbued w...</td>
+      <td>The Factor</td>
+      <td>98</td>
+      <td>125.0</td>
+      <td>South Australia</td>
+      <td>Barossa Valley</td>
+      <td>NaN</td>
+      <td>Joe Czerwinski</td>
+      <td>@JoeCz</td>
+      <td>Torbreck 2013 The Factor Shiraz (Barossa Valley)</td>
+      <td>Shiraz</td>
+      <td>Torbreck</td>
+    </tr>
+  </tbody>
+</table>
+<p>49 rows × 13 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/Myfastpages/2020/12/24/Indexing-Selecting-Assigning.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Myfastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Myfastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Myfastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Data Science toolbox on jupyter notebook.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Myfastpages/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Myfastpages/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

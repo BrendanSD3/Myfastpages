@@ -10,13 +10,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Data Science toolbox on jupyter notebook." />
 <meta property="og:description" content="Data Science toolbox on jupyter notebook." />
-<link rel="canonical" href="https://brendansd3.github.io/Myfastpages/2020/12/23/PandasExercise6_-Renaming-and-Combining.html" />
-<meta property="og:url" content="https://brendansd3.github.io/Myfastpages/2020/12/23/PandasExercise6_-Renaming-and-Combining.html" />
+<link rel="canonical" href="https://brendansd3.github.io/Myfastpages/2020/12/24/Grouping-Sorting.html" />
+<meta property="og:url" content="https://brendansd3.github.io/Myfastpages/2020/12/24/Grouping-Sorting.html" />
 <meta property="og:site_name" content="Data Science Blog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-12-23T00:00:00-06:00" />
+<meta property="article:published_time" content="2020-12-24T00:00:00-06:00" />
 <script type="application/ld+json">
-{"description":"Data Science toolbox on jupyter notebook.","url":"https://brendansd3.github.io/Myfastpages/2020/12/23/PandasExercise6_-Renaming-and-Combining.html","@type":"BlogPosting","headline":"Introduction","dateModified":"2020-12-23T00:00:00-06:00","datePublished":"2020-12-23T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://brendansd3.github.io/Myfastpages/2020/12/23/PandasExercise6_-Renaming-and-Combining.html"},"@context":"https://schema.org"}</script>
+{"description":"Data Science toolbox on jupyter notebook.","url":"https://brendansd3.github.io/Myfastpages/2020/12/24/Grouping-Sorting.html","@type":"BlogPosting","headline":"Introduction","dateModified":"2020-12-24T00:00:00-06:00","datePublished":"2020-12-24T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://brendansd3.github.io/Myfastpages/2020/12/24/Grouping-Sorting.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Myfastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://brendansd3.github.io/Myfastpages/feed.xml" title="Data Science Blog" /><link rel="shortcut icon" type="image/x-icon" href="/Myfastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,8 +71,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Introduction</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-12-23T00:00:00-06:00" itemprop="datePublished">
-        Dec 23, 2020
+    <h1 class="post-title p-name" itemprop="name headline">Introduction</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-12-24T00:00:00-06:00" itemprop="datePublished">
+        Dec 24, 2020
       </time>
        • <span class="read-time" title="Estimated read time">
     
@@ -88,19 +88,19 @@ window.onload = wrap_img;
         <div class="pb-5 d-flex flex-wrap flex-justify-end">
           <div class="px-2">
 
-    <a href="https://github.com/BrendanSD3/Myfastpages/tree/master/_notebooks/PandasExercise6_ Renaming and Combining.ipynb" role="button" target="_blank">
+    <a href="https://github.com/BrendanSD3/Myfastpages/tree/master/_notebooks/2020-12-24-Grouping-Sorting.ipynb" role="button" target="_blank">
 <img class="notebook-badge-image" src="/Myfastpages/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/BrendanSD3/Myfastpages/master?filepath=_notebooks%2FPandasExercise6_+Renaming+and+Combining.ipynb" target="_blank">
+    <a href="https://mybinder.org/v2/gh/BrendanSD3/Myfastpages/master?filepath=_notebooks%2F2020-12-24-Grouping-Sorting.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/Myfastpages/assets/badges/binder.svg" alt="Open In Binder"/>
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://colab.research.google.com/github/BrendanSD3/Myfastpages/blob/master/_notebooks/PandasExercise6_ Renaming and Combining.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/BrendanSD3/Myfastpages/blob/master/_notebooks/2020-12-24-Grouping-Sorting.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/Myfastpages/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
@@ -112,14 +112,14 @@ window.onload = wrap_img;
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/PandasExercise6_ Renaming and Combining.ipynb
+# file to edit: _notebooks/2020-12-24-Grouping-Sorting.ipynb
 -->
 
 <div class="container" id="notebook-container">
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong><a href="https://www.kaggle.com/learn/pandas">Pandas Home Page</a></strong></p>
+<p>Reference <strong><a href="https://www.kaggle.com/learn/pandas">Pandas Home Page</a></strong></p>
 <hr />
 
 </div>
@@ -135,7 +135,7 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="n">reviews</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/winemag-data-130k.csv&quot;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-
+<span class="c1">#pd.set_option(&quot;display.max_rows&quot;, 5)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Setup complete.&quot;</span><span class="p">)</span>
 </pre></div>
@@ -144,12 +144,32 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Setup complete.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Exercises">Exercises<a class="anchor-link" href="#Exercises"> </a></h1><p>View the first several lines of your data by running the cell below:</p>
+<h1 id="Exercises">Exercises<a class="anchor-link" href="#Exercises"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.">1.<a class="anchor-link" href="#1."> </a></h2><p>Who are the most common wine reviewers in the dataset? Create a <code>Series</code> whose index is the <code>taster_twitter_handle</code> category from the dataset, and whose values count how many reviews each person wrote.</p>
 
 </div>
 </div>
@@ -161,34 +181,10 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">reviews</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="1.">1.<a class="anchor-link" href="#1."> </a></h2><p><code>region_1</code> and <code>region_2</code> are pretty uninformative names for locale columns in the dataset. Create a copy of <code>reviews</code> with these columns renamed to <code>region</code> and <code>locale</code>, respectively.</p>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">renamed</span> <span class="o">=</span> <span class="n">____</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">reviews_written</span> <span class="o">=</span> <span class="n">____</span>
 
 <span class="c1"># Check your answer</span>
-<span class="n">renamed</span>
+<span class="n">reviews_written</span>
 </pre></div>
 
     </div>
@@ -200,7 +196,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.">2.<a class="anchor-link" href="#2."> </a></h2><p>Set the index name in the dataset to <code>wines</code>.</p>
+<h2 id="2.">2.<a class="anchor-link" href="#2."> </a></h2><p>What is the best wine I can buy for a given amount of money? Create a <code>Series</code> whose index is wine prices and whose values is the maximum number of points a wine costing that much was given in a review. Sort the values by price, ascending (so that <code>4.0</code> dollars is at the top and <code>3300.0</code> dollars is at the bottom).</p>
 
 </div>
 </div>
@@ -212,10 +208,10 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">reindexed</span> <span class="o">=</span> <span class="n">____</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">best_rating_per_price</span> <span class="o">=</span> <span class="n">____</span>
 
 <span class="c1"># Check your answer</span>
-<span class="n">reindexed</span>
+<span class="n">best_rating_per_price</span>
 </pre></div>
 
     </div>
@@ -227,8 +223,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.">3.<a class="anchor-link" href="#3."> </a></h2><p>The <a href="https://www.kaggle.com/residentmario/things-on-reddit/data">Things on Reddit</a> dataset includes product links from a selection of top-ranked forums ("subreddits") on reddit.com. Run the cell below to load a dataframe of products mentioned on the <em>/r/gaming</em> subreddit and another dataframe for products mentioned on the <em>r//movies</em> subreddit.</p>
-<p>Fix the path to the csv</p>
+<h2 id="3.">3.<a class="anchor-link" href="#3."> </a></h2><p>What are the minimum and maximum prices for each <code>variety</code> of wine? Create a <code>DataFrame</code> whose index is the <code>variety</code> category from the dataset and whose values are the <code>min</code> and <code>max</code> values thereof.</p>
 
 </div>
 </div>
@@ -240,36 +235,10 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gaming_products</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;gaming.csv&quot;</span><span class="p">)</span>
-<span class="n">gaming_products</span><span class="p">[</span><span class="s1">&#39;subreddit&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;r/gaming&quot;</span>
-<span class="n">movie_products</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;.movies.csv&quot;</span><span class="p">)</span>
-<span class="n">movie_products</span><span class="p">[</span><span class="s1">&#39;subreddit&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;r/movies&quot;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Create a <code>DataFrame</code> of products mentioned on <em>either</em> subreddit.</p>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">combined_products</span> <span class="o">=</span> <span class="n">____</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">price_extremes</span> <span class="o">=</span> <span class="n">____</span>
 
 <span class="c1"># Check your answer</span>
+<span class="n">price_extremes</span>
 </pre></div>
 
     </div>
@@ -281,8 +250,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4.">4.<a class="anchor-link" href="#4."> </a></h2><p>The <a href="https://www.kaggle.com/open-powerlifting/powerlifting-database">Powerlifting Database</a> dataset on Kaggle includes one CSV table for powerlifting meets and a separate one for powerlifting competitors. Run the cell below to load these datasets into dataframes:
-Fix the path to the csv</p>
+<h2 id="4.">4.<a class="anchor-link" href="#4."> </a></h2><p>What are the most expensive wine varieties? Create a variable <code>sorted_varieties</code> containing a copy of the dataframe from the previous question where varieties are sorted in descending order based on minimum price, then on maximum price (to break ties).</p>
 
 </div>
 </div>
@@ -294,34 +262,88 @@ Fix the path to the csv</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">powerlifting_meets</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;powerlifting-database/meets.csv&quot;</span><span class="p">)</span>
-<span class="n">powerlifting_competitors</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;powerlifting-database/openpowerlifting.csv&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Both tables include references to a <code>MeetID</code>, a unique key for each meet (competition) included in the database. Using this, generate a dataset combining the two tables into one.</p>
-
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">powerlifting_combined</span> <span class="o">=</span> <span class="n">____</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sorted_varieties</span> <span class="o">=</span> <span class="n">____</span>
 
 <span class="c1"># Check your answer</span>
+<span class="n">sorted_varieties</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.">5.<a class="anchor-link" href="#5."> </a></h2><p>Create a <code>Series</code> whose index is reviewers and whose values is the average review score given out by that reviewer. Hint: you will need the <code>taster_name</code> and <code>points</code> columns.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">reviewer_mean_ratings</span> <span class="o">=</span> <span class="n">____</span>
+
+<span class="c1"># Check your answer</span>
+<span class="n">reviewer_mean_ratings</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Are there significant differences in the average scores assigned by the various reviewers? Run the cell below to use the <code>describe()</code> method to see a summary of the range of values.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">reviewer_mean_ratings</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="6.">6.<a class="anchor-link" href="#6."> </a></h2><p>What combination of countries and varieties are most common? Create a <code>Series</code> whose index is a <code>MultiIndex</code>of <code>{country, variety}</code> pairs. For example, a pinot noir produced in the US should map to <code>{"US", "Pinot Noir"}</code>. Sort the values in the <code>Series</code> in descending order based on wine count.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_variety_counts</span> <span class="o">=</span> <span class="n">____</span>
+
+<span class="c1"># Check your answer</span>
+<span class="n">country_variety_counts</span>
 </pre></div>
 
     </div>
@@ -335,7 +357,7 @@ Fix the path to the csv</p>
 
 
 
-  </div><a class="u-url" href="/Myfastpages/2020/12/23/PandasExercise6_-Renaming-and-Combining.html" hidden></a>
+  </div><a class="u-url" href="/Myfastpages/2020/12/24/Grouping-Sorting.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
